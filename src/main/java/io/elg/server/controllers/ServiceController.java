@@ -93,6 +93,6 @@ public class ServiceController {
 
     @GetMapping(path ="/image/{fileName}", produces = IMAGE_PNG_VALUE) // we return image instead of json
     public byte[] getServerImage(@PathVariable("fileName") String  fileName) throws IOException {
-        return Files.readAllBytes(Paths.get(System.getProperty("/Users/mac")+"/Desktop/image/"+fileName));
+        return Files.readAllBytes(Paths.get(System.getProperty("user.home")+"/Desktop/image/"+fileName));
     }
 }
